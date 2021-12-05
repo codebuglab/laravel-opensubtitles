@@ -1,0 +1,38 @@
+{
+    "name": "codebuglab/laravel-opensubtitles",
+    "description": "Simple integration with OpenSubtitles API to search for and download subtitles.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Elkomy",
+            "email": "mo.ah.elkomy@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "CodeBugLab\\OpenSubtitles": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CodeBugLab\\OpenSubtitles\\OpenSubtitlesServiceProvider"
+            ]
+        }
+    },
+    "keywords": [
+        "opensubtitles",
+        "opensubtitles-api",
+        "download-subtitles",
+        "subtitles-downloader",
+        "subtitles",
+        "subtitle",
+        "subtitles-search",
+        "api",
+        "php",
+        "laravel"
+    ]
+}
