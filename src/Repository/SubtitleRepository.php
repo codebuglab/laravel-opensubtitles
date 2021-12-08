@@ -12,7 +12,7 @@ class SubtitleRepository extends AbstractRepository
      */
     public function searchForSubtitles(array $parameters): self
     {
-        $this->response = $this->apiGenerator->get("subtitles?" . http_build_query($parameters), $this->getHeaders());
+        $this->response = $this->apiGenerator->get("subtitles?" . http_build_query($parameters));
         return $this;
     }
 }

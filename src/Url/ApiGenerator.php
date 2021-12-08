@@ -23,13 +23,22 @@ class ApiGenerator implements ApiGeneratorInterface
         $this->httpRequest = $httpRequest;
     }
 
-    public function post($path, $fields, $headers)
+    public function post($path, $fields)
     {
-        return $this->httpRequest->post($this->apiUrl . $path, $fields, $headers);
+        return $this->httpRequest->post($this->apiUrl . $path, $fields, $this->getHeaders());
     }
 
-    public function get($path, $headers)
+    public function get($path)
     {
-        return $this->httpRequest->get($this->apiUrl . $path, $headers);
+        return $this->httpRequest->get($this->apiUrl . $path, $this->getHeaders());
+    }
+
+
+    protected function getHeaders(): array
+    {
+        return [
+            "Content-type: application/json;",
+            "Api-Key: {$this->apiKey}"
+        ];
     }
 }

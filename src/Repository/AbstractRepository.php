@@ -21,12 +21,4 @@ abstract class AbstractRepository
     {
         return json_decode($this->response, true);
     }
-
-    protected function getHeaders(): array
-    {
-        return [
-            "Content-type: application/json;",
-            "Api-Key: PdZRmnAqM4hI7QA6KhQwDYe7Gr6Y0P5n"
-        ];
-    }
 }

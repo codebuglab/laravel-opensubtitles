@@ -12,7 +12,7 @@ class DownloadRepository extends AbstractRepository
      */
     public function details(array $parameters): self
     {
-        $this->response = $this->apiGenerator->post("download", $parameters, $this->getHeaders());
+        $this->response = $this->apiGenerator->post("download", $parameters);
         return $this;
     }
 
