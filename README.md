@@ -2,7 +2,7 @@
 
 Simple integration with OpenSubtitles API to search for and download subtitles.
 
-![Laravel media removable](logo.png)
+![Laravel OpenSubtitles](logo.png)
 
 ## Table of contents
 - [Setup](#setup)
