@@ -25,7 +25,7 @@ class OpenSubtitlesServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(ApiGenerator::class, function () {
-            return new ApiGenerator(AbstractRepository::$apiUrl, config('opensubtitles.api_key'), new Curl);
+            return new ApiGenerator(AbstractRepository::$apiUrl, config('opensubtitles.api_key'), config('opensubtitles.user_agent'), new Curl);
         });
 
         $this->app->singleton('OpenSubtitles', OpenSubtitles::class);
