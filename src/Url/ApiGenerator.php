@@ -12,13 +12,17 @@ class ApiGenerator implements ApiGeneratorInterface
 
     protected $apiKey;
 
+    protected userAgent;
+
     protected $httpRequest;
 
-    public function __construct(string $apiUrl, string $apiKey, HttpRequestInterface $httpRequest)
+    public function __construct(string $apiUrl, string $apiKey, string $userAgent, HttpRequestInterface $httpRequest)
     {
         $this->apiUrl = $apiUrl;
 
         $this->apiKey = $apiKey;
+
+        $this->$userAgent = $userAgent;
 
         $this->httpRequest = $httpRequest;
     }
@@ -39,7 +43,7 @@ class ApiGenerator implements ApiGeneratorInterface
         return [
             "Content-type: application/json;",
             "Api-Key: {$this->apiKey}",
-            "User-Agent: En v0.1"
+            "User-Agent: {$this->userAgent}"
         ];
     }
 }
