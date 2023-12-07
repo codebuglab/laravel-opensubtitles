@@ -38,7 +38,8 @@ class ApiGenerator implements ApiGeneratorInterface
     {
         return [
             "Content-type: application/json;",
-            "Api-Key: {$this->apiKey}"
+            "Api-Key: {$this->apiKey}",
+            "User-Agent: En v0.1"
         ];
     }
 }
