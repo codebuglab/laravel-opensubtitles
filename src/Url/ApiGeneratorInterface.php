@@ -6,5 +6,5 @@ use CodeBugLab\OpenSubtitles\HttpRequest\HttpRequestInterface;
 
 interface ApiGeneratorInterface
 {
-    public function __construct(string $apiUrl, string $apiKey, HttpRequestInterface $httpRequest);
+    public function __construct(string $apiUrl, string $apiKey, string $userAgent, HttpRequestInterface $httpRequest);
 }
