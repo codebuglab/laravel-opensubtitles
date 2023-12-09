@@ -12,7 +12,7 @@ class ApiGenerator implements ApiGeneratorInterface
 
     protected $apiKey;
 
-    protected userAgent;
+    protected $userAgent;
 
     protected $httpRequest;
 
