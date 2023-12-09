@@ -22,7 +22,7 @@ class ApiGenerator implements ApiGeneratorInterface
 
         $this->apiKey = $apiKey;
 
-        $this->$userAgent = $userAgent;
+        $this->userAgent = $userAgent;
 
         $this->httpRequest = $httpRequest;
     }
